@@ -2,7 +2,7 @@
   "name": "madhacks2019",
   "version": "1.0.0",
   "description": "Sustainability-oriented web app to track usage of water",
-  "main": "index.js",
+  "main": "pages/index.js",
   "scripts": {
 	"dev": "next",
 	"build": "next build",
