@@ -15,3 +15,6 @@
 
 # Node.js dependencies:
 node_modules/
+
+# Build files (they will be built on upload)
+.next/
