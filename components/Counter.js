@@ -24,6 +24,8 @@ export default class Counter extends React.Component {
 	}
 
 	render() {
+		let totalCount = Math.round(this.props.obj.multiplier * this.props.obj.count * 10) / 10
+
 		return (
 			<div className="counter">
 				<p className="label">{this.props.name}</p>
@@ -31,7 +33,7 @@ export default class Counter extends React.Component {
 				<input type="text" value={this.props.obj.count} onChange={this.handleChange}/>
 				<p className="units">{this.props.obj.units}</p>
 				<button className="add" onClick={this.add}>+</button>
-				<p className="total">Litres used: {this.props.obj.multiplier * this.props.obj.count}</p>
+				<p className="total">Litres used: {totalCount}</p>
 
 
 				<style jsx>{`
