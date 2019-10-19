@@ -1,12 +1,14 @@
 import Layout from "../components/HeaderedLayout";
-import Counter from "../components/Counter";
+import WaterCalculator from "../components/WaterCalculator";
 
 export default class Index extends React.Component {
-	render = () => (
-		<Layout>
-			<p>Track your water use:</p>
-			<Counter name="Toilet Flushes"/>
-			<Counter name="Minutes Showered"/>
-		</Layout>
-	);
+
+	render() {
+		return (
+			<Layout>
+				<p>Track your water use:</p>
+				<WaterCalculator />
+			</Layout>
+		)
+	};
 }
