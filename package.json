@@ -1,0 +1,26 @@
+{
+  "name": "madhacks2019",
+  "version": "1.0.0",
+  "description": "Sustainability-oriented web app to track usage of water",
+  "main": "index.js",
+  "scripts": {
+	"dev": "next",
+	"build": "next build",
+	"start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ophunt/madhacks2019.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ophunt/madhacks2019/issues"
+  },
+  "homepage": "https://github.com/ophunt/madhacks2019#readme",
+  "dependencies": {
+    "next": "^9.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}
