@@ -4,9 +4,9 @@
   "description": "Sustainability-oriented web app to track usage of water",
   "main": "index.js",
   "scripts": {
-	"dev": "next",
-	"build": "next build",
-	"start": "next start"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
