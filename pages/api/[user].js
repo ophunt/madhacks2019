@@ -41,8 +41,10 @@ export default (req, res) => {
 				console.log(err.stack);
 				returnFail(res);
 			} else {
+				console.log(data);
 				returnData(res, JSON.parse(data));
 			};
 		});
+		// returnData(res, {test: "text"});
 	}
 }

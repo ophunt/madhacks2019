@@ -9,7 +9,7 @@ export default class Index extends React.Component {
 
 	render() {
 		return (
-			<Calculator categories={this.categories} mainUnit="grams" mainUnitShort="g" />
+			<Calculator categories={this.categories} data={this.props.data} mainUnit="grams" mainUnitShort="g" />
 		)
 	};
 }

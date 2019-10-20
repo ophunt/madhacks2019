@@ -1,12 +1,15 @@
+import fetch from 'isomorphic-unfetch';
 import Counter from "../components/Counter";
 
 export default class Index extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.state = {};
+
 		let categories = props.categories;
 
-		this.state = {};
+		let categoryCounts = props.data;
 
 		for (let i in categories) {
 			let category = categories[i];
@@ -14,7 +17,7 @@ export default class Index extends React.Component {
 				multiplier: category[1],
 				units: category[2],
 				unit: category[3],
-				count: 0,
+				count: categoryCounts[category[0]] || 0,
 				mainUnit: props.mainUnit,
 				mainUnitShort: props.mainUnitShort,
 			};
@@ -28,16 +31,27 @@ export default class Index extends React.Component {
 		const categoryObj = this.state[categoryName];
 		const newCategoryObj = { ...categoryObj, count: n};
 
+		this.updateSaveData("owen", categoryName, n);
+
 		this.setState({[categoryName]: newCategoryObj});
 	};
 
-	updateSaveData(user, key, value) {
-		let obj = JSON.parse();
-		obj[key] = value;
+	updateSaveData(user, dataKey, dataValue) {
+		let data = {};
+		data[dataKey] = dataValue;
 
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "api/data", true);
+		xhr.setRequestHeader('Content-Type', 'application/json');
+		xhr.send(JSON.stringify({
+			"user": user,
+			"data": data
+		}));
 	};
 
 	render() {
+		console.log(this.props.test);
+
 		return (
 			<>
 				{
@@ -54,7 +68,7 @@ export default class Index extends React.Component {
 				Total Used: <b>{Math.round(Object.keys(this.state).map((value, index) => {
 					let obj = this.state[value];
 					return obj.multiplier * obj.count;
-				}).reduce((prev, curr) => prev + curr) * 10) / 10}</b> {this.props.mainUnit} used
+				}).reduce((prev, curr) => prev + curr, 0) * 10) / 10}</b> {this.props.mainUnit} used
 				</p>
 
 				<style jsx>{`
