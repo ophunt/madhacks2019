@@ -2,6 +2,7 @@ import fetch from 'isomorphic-unfetch';
 import Head from "next/head";
 import Layout from "../components/HeaderedLayout";
 import WaterCalculator from "../components/WaterCalculator";
+import WasteCalculator from "../components/WasteCalculator";
 import PlasticCalculator from "../components/PlasticCalculator";
 
 export default class Index extends React.Component {
@@ -18,6 +19,12 @@ export default class Index extends React.Component {
 			["Seconds of Sink Use", 0.1, "seconds", "second"],
 			["Loads of Laundry", 80, "loads", "load"],
 			["Dishwasher Runs", 20, "runs", "run"],
+		];
+
+		this.state.foodCategories = [
+			// ["name", litres/unit, plural unit, singular unit]
+			["Fruit Peels", 0.05, "peels", "peel"],
+			["Uneaten Leftovers", 1, "pounds", "pound"],
 		];
 
 		this.state.plasticCategories = [
@@ -44,6 +51,9 @@ export default class Index extends React.Component {
 				<Layout>
 					<p>Track your water use:</p>
 					<WaterCalculator categories={this.state.waterCategories} data={this.props.data} />
+
+					<p>Track your food waste:</p>
+					<WasteCalculator categories={this.state.foodCategories} data={this.props.data} />
 
 					<p>Track your plastic use:</p>
 					<PlasticCalculator categories={this.state.plasticCategories} data={this.props.data} />

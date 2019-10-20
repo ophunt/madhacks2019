@@ -9,9 +9,9 @@ export default class Header extends React.Component {
 			<Link href="/tracker">
 				<a className="tracker">TRACKER</a>
 			</Link>
-			<Link href="/ranking">
+			{/* <Link href="/ranking">
 				<a className="ranking">RANKING</a>
-			</Link>
+			</Link> */}
 			<Link href="/tips">
 				<a className="work">BLOG</a>
 			</Link>

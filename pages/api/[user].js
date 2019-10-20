@@ -20,20 +20,20 @@ export default (req, res) => {
 		path = "public/saveData/";
 	}
 
-	fs.readdir(".", function(err, items) {
-		console.log(items);
+	// fs.readdir(".", function(err, items) {
+	// 	console.log(items);
 
-		for (var i=0; i<items.length; i++) {
-			console.log(items[i]);
-			if (fs.lstatSync(items[i]).isDirectory()) {
-				fs.readdir(items[i], function(err, items) {
-					for (var j=0; j<items.length; j++) {
-						console.log(items[i] + "/" + items[i][j]);
-					}
-				});
-			}
-		}
-	});
+	// 	for (var i=0; i<items.length; i++) {
+	// 		console.log(items[i]);
+	// 		if (fs.lstatSync(items[i]).isDirectory()) {
+	// 			fs.readdir(items[i], function(err, items) {
+	// 				for (var j=0; j<items.length; j++) {
+	// 					console.log(items[i] + "/" + items[i][j]);
+	// 				}
+	// 			});
+	// 		}
+	// 	}
+	// });
 
 	if (req.method === "POST") {
 
