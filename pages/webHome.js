@@ -1,5 +1,7 @@
-function Home() {
-    return <div>Welcome!</div>
-  }
-  
-  export default Home
+export default class Home extends React.Component {
+	render() {
+		return (
+			<div>Home</div>
+		)
+	}
+}
