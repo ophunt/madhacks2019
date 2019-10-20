@@ -1,12 +1,12 @@
 export default class Login extends React.Component {
     render = () => (
         <div className="body">
-            <img src="inbottlr.png" alt="logo" width="250" height="120" />
+            <img src="pics/inbottlr.png" alt="logo" width="250" height="120" />
             <form action="hackathon/action_page.php">
                 <div className="two_container">
                     <div className="container">
                         <h1>Log in</h1>
-                        <p>Don't have an account? <a href="hackathon/signup.html">Register Here</a></p>
+                        <p>Don't have an account? <a href="signup.html">Register Here</a></p>
                         <br /><br />
                         <label for="email"><b>Email</b></label>
                         <input type="text" placeholder="Enter Email" name="email" required />
@@ -22,7 +22,7 @@ export default class Login extends React.Component {
             <style jsx>{`
 					* {box-sizing: border-box}
                     .body{
-                        backgroundImage:url("../leaf.png");
+                        backgroundImage:url("pics/leaf.png");
                         background-position: right;
                         background-size: 700px 900px;
                         background-repeat: no-repeat;
@@ -78,6 +78,9 @@ export default class Login extends React.Component {
                     }
                     #login{
                         float:right;
+                    }
+                    p{
+                      font-size: 13px;
                     }
 				`}</style>
         </div>

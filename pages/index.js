@@ -4,22 +4,29 @@ export default class Index extends React.Component {
 	render = () => (
 		<Layout>
 			<div className="body">
-				<blockquote>
-					<div id="one01" className="examplebox">
-						<table cellspacing="13">
-							<tr>
-								<th colspan="3">Project Management</th>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</table>
-					</div>
-				</blockquote>
-				<br /><br /><br /><br />
-				<footer>Copyright © 2019 by</footer>
+			<table cellspacing="13">
+            <tr><th colspan="3"><img src="pics/graphic-1@2x.png" alt="Go Green Love Environment" width="1000" height="300" /></th></tr>
+            <tr>
+                <td>
+				<img src="pics/water@2x.png" width="400" height="350" />
+				</td>
+                <td>
+				<img src="pics/foodwaste@2x.png" width="400" height="350" />	
+                </td>
+                <td>
+                <img src="pics/plastic@2x.png" width="400" height="350" />    
+                </td>
+            </tr>
+			<tr>
+                <th colspan="3"><img src="pics/howtodo@2x.png" alt="Go Green Love Environment" width="1000" />
+				</th>
+            </tr>
+			</table>   
+		<br/>
+
+		<footer>
+			<p>Copyright © 2019 by </p>
+		</footer>
 				<style jsx>{`
 					.body {
 						background-color: white;
@@ -27,8 +34,8 @@ export default class Index extends React.Component {
 						margin-left: auto;
 						background-repeat: no-repeat;
 						margin-right: auto;
-						padding-right: 0px;
-						padding-left: 0px;
+						padding-right: 20px;
+						padding-left: 20px;
 					}
 					h1 {
 						color: darkolivegreen;
@@ -45,7 +52,16 @@ export default class Index extends React.Component {
 					p {
 						line-height: 150%;
 						padding-top: 14px;
-						font-family: 'Open Sans', sans-serif;
+						font-family: 'Open Sans', sans-serif;	
+					}
+					
+					.track,.ranking, .work, .contact, .login{
+						margin: 0 0.5em;
+						padding: 7px;
+					}
+					.logo{
+						margin-right: auto;
+						padding: 8px;
 					}
 
 					#intro{
@@ -53,7 +69,11 @@ export default class Index extends React.Component {
 						flex-direction:column;
 						flex-wrap:wrap;
 					}
-
+					ul li {
+						padding-top: 16px;
+						font-family: 'Open Sans', sans-serif;
+						list-style-type: none;
+					}
 					footer {
 						padding-top: 64px;
 						padding-bottom: 64px;
@@ -62,40 +82,32 @@ export default class Index extends React.Component {
 						text-align: center;
 						font-family: 'Open Sans', sans-serif;
 					}
-					th, td {
-						border: 2px  groove ;
-						border-color:darkgreen;
-
-					}
+					
 					table{
 						width: 100%;
 						font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 					}
+					.table1{
+						width: 40%;
+						font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+						margin-top: 20px;   
+					}
 					th{
-						height: 50px;
+						height: 50px;    
 					}
 					td{
 						width: 50%;
 						height: 300px;
 					}
-					table h4, table p{
+					table h4, table p{ 
 						align-content: center;
 					}
-					iframe {
-						padding-top: 30px;
-						padding-left: 120px;
-						border-style: dotted;
-					}
-					form {
-						padding-right: 250px;
-						padding-left: 250px;
-						font-family: 'Open Sans', sans-serif;
-					}
+					
 					blockquote{
 						background-color:#f3f0e1;
-						color:#464C42;
-						text-align: center;
-						padding-top: 10px;
+						color:#464C42; 
+						text-align: center; 
+						 padding-top: 10px;
 						padding-bottom: 10px;
 						margin: auto;
 						font-family: 'Open Sans', sans-serif;
@@ -103,31 +115,30 @@ export default class Index extends React.Component {
 						border-radius: 4px;
 						border: 2px solid black;
 						margin: 8px;
-					}
-					#bling {
-						float: left;
-						position: fixed;
-					}
+					} 
+					
 					.blueText {
 						color:blue;
 						background-color:lightblue;
 					}
-
+					
+					/* this defines a style for an ID */
 					#blueText {
 						color: blueviolet;
 						background-color: lightpink;
 					}
-
+					
+					/* a simple box style to play with */
 					.onebox {
 						border: 2px solid darkorange;
 						border-radius: 2px;
 						width:150px;
 						padding: 0px 10px 0px 10px;
-						margin: 15px 5px 15px 5px;
+						margin: 15px 5px 15px 5px; 
 						background-color: lightgoldenrodyellow;
 						color:darkorange;
 					}
-
+					
 					/* for playing with the buttons */
 					.onebutton {
 						width:100px;
@@ -136,14 +147,6 @@ export default class Index extends React.Component {
 						border: 2px solid black;
 						margin: 8px;
 					}
-					#track_button,#profile{
-						width:300px;
-						height:30px;
-						border-radius: 5px;
-						border: 2px solid black;
-						margin: 8px;
-						color: pink;
-					}
 					.container {
 						position: relative;
 						width: 500px;
@@ -151,32 +154,49 @@ export default class Index extends React.Component {
 					.container div {
 						height: 300px;
 					}
-
+					
 					.column-left {
 						width: 33%;
 						left: 0;
 						position: absolute;
 					}
 					.column-center {
-						width: 34%;
+						margin-top: 10px;
 						margin-left: 33%;
-						position: absolute;
+						height: 2000px;
+					   
+						border: 2px solid black;
 					}
 					.column-right {
 						width: 33%;
-						right: 0;
+						margin-right: 0;
 						position: absolute;
 					}
-
+					
+					/* Clear floats after the columns */
+					
+					
 					td{
 						width: 30%;
 						height: 300px;
 						border-spacing: 10px;
+						object-position:center;
 					}
 					tr{
 						height: 300px;
 						border-spacing: 5em;
 					}
+					.profile_table{
+						margin-left: 100px;
+					}
+					.intro{
+						width: 1000px;
+					}
+					.waste{
+						padding-left: 100px;
+					}
+					/* Clear floats after the columns */
+					
 				`}</style>
 		</div>
 	</Layout>
