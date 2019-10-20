@@ -1,10 +1,11 @@
 @import url("login.css");
 * {box-sizing: border-box}
 body{
-	background-image:url("pic/signin.png");
+	background-image:url("pic/login.jpg");
 	background-position: right;
 	background-size: 700px 900px;
 	background-repeat: no-repeat;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 /* Add padding to containers */
 .container {

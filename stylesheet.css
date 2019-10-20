@@ -32,6 +32,7 @@ p {
 	flex-direction: row;
 	align-items: center;
 	margin: 0;
+	width: 100%;
 }
 .track,.ranking, .work, .contact, .login{
 	margin: 0 0.5em;
@@ -49,9 +50,6 @@ p {
 	margin: 0.3em;
 	font-size: 10px;
 }
-header img {
-	width: 100%;
-}
 
 #nav a:hover {
 	color: #2980b9;
@@ -62,13 +60,10 @@ header img {
 	flex-direction:column;
 	flex-wrap:wrap;
 }
-
-}
-
-
 ul li {
 	padding-top: 16px;
 	font-family: 'Open Sans', sans-serif;
+	list-style-type: none;
 }
 footer {
 	padding-top: 64px;
@@ -78,11 +73,7 @@ footer {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
 }
-th, td {
-    border: 2px  groove ;
-    border-color:darkgreen;
-   
-}
+
 table{
 	width: 100%;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
@@ -90,12 +81,10 @@ table{
 .table1{
 	width: 40%;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-    margin-top: 20px;
-    
+    margin-top: 20px;   
 }
 th{
-	height: 50px;
-    
+	height: 50px;    
 }
 td{
 	width: 50%;
@@ -104,16 +93,7 @@ td{
 table h4, table p{ 
 	align-content: center;
 }
-iframe {
-	padding-top: 30px;
-	padding-left: 120px;
-    border-style: dotted;
-}
-form {
-	padding-right: 250px;
-	padding-left: 250px;
-	font-family: 'Open Sans', sans-serif;
-}
+
 blockquote{
 	background-color:#f3f0e1;
 	color:#464C42; 
@@ -127,10 +107,7 @@ blockquote{
     border: 2px solid black;
     margin: 8px;
 } 
-#bling {
-	float: left;
-	position: fixed;
-}
+
 .blueText {
     color:blue;
     background-color:lightblue;
@@ -161,14 +138,6 @@ blockquote{
     border: 2px solid black;
     margin: 8px;
 }
-#track_button,#profile{
-    width:300px;
-    height:30px;
-    border-radius: 5px;
-    border: 2px solid black;
-    margin: 8px;
-    color: pink;
-}
 .container {
     position: relative;
     width: 500px;
@@ -191,7 +160,7 @@ blockquote{
 }
 .column-right {
     width: 33%;
-    right: 0;
+    margin-right: 0;
     position: absolute;
 }
 
@@ -201,11 +170,20 @@ blockquote{
 td{
 	width: 30%;
 	height: 300px;
-     border-spacing: 10px;
+    border-spacing: 10px;
+	object-position:center;
 }
 tr{
     height: 300px;
     border-spacing: 5em;
 }
-
+.profile_table{
+    margin-left: 100px;
+}
+.intro{
+    width: 1000px;
+}
+.waste{
+	padding-left: 100px;
+}
 /* Clear floats after the columns */

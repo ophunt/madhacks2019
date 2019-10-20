@@ -1,9 +1,10 @@
 * {box-sizing: border-box}
 body{
-	background-image:url("../leaf.png");
+	background-image:url("pic/leaf.png");
 	background-position: right;
 	background-size: 700px 900px;
 	background-repeat: no-repeat;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 /* Add padding to containers */
 .container {
