@@ -9,9 +9,9 @@ export default class Index extends React.Component {
 			["Toilet Flushes", 6, "flushes", "flush"],
 			["Minutes Showered", 8, "minutes", "minute"],
 			["Baths Taken", 40, "baths", "bath"],
-			["Seconds of Hand Washing", 0.1, "seconds", "second"],
+			["Seconds of Sink Use", 0.1, "seconds", "second"],
 			["Loads of Laundry", 80, "loads", "load"],
-			["Times Dishwasher Run", 20, "runs", "run"],
+			["Dishwasher Runs", 20, "runs", "run"],
 		];
 	};
 

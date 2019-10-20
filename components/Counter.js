@@ -29,11 +29,13 @@ export default class Counter extends React.Component {
 		return (
 			<div className="counter">
 				<p className="label">{this.props.name}</p>
-				<button className="subtract" onClick={this.subtract}>-</button>
+				<button id="subtract" onClick={this.subtract}>-</button>
 				<input type="text" value={this.props.obj.count} onChange={this.handleChange}/>
 				<p className="units">{this.props.obj.units}</p>
-				<button className="add" onClick={this.add}>+</button>
-				<p className="total">x<b>{this.props.obj.multiplier}</b> {this.props.obj.mainUnitShort}/{this.props.obj.unit} = </p>
+				<button id="add" onClick={this.add}>+</button>
+				<p className="total">
+					x<b>{this.props.obj.multiplier}</b> {this.props.obj.mainUnitShort} / {this.props.obj.unit} =
+				</p>
 				<p className="total"><b>{totalCount}</b> {this.props.obj.mainUnit} used</p>
 
 				<style jsx>{`
@@ -65,14 +67,19 @@ export default class Counter extends React.Component {
 
 					button {
 						border-radius: 5px;
+						cursor: pointer;
 					}
 
-					button.add {
+					button:focus {
+						outline: 0px;
+					}
+
+					button#add {
 						border: 1px solid green;
 						background-color: lightgreen;
 					}
 
-					button.subtract {
+					button#subtract {
 						border: 1px solid red;
 						background-color: lightcoral;
 					}
