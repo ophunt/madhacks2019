@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Layout from "../components/HeaderedLayout";
 import WaterCalculator from "../components/WaterCalculator";
 import PlasticCalculator from "../components/PlasticCalculator";
 import DataManager from "../components/DataManager";

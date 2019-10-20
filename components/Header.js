@@ -9,7 +9,7 @@ export default class Header extends React.Component {
 				<a className="logo"><img src="pic/inbottlr.png" width="150" height="50"/></a>
 			</Link>
 			<Link href="/track">
-				<a className="track">TRACKER</a>
+				<a className="tracker">TRACKER</a>
 			</Link>
 			<Link href="/ranking">
 				<a className="ranking">RANKING</a>
@@ -67,4 +67,3 @@ export default class Header extends React.Component {
 			// 	<li className="contact"><a href="about.html">ABOUT</a></li>
 			// 	<li className="login"><a href="login.html"><img src="webapp/login.jpg" /></a></li>
 			// </nav>
-			
