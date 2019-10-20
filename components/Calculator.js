@@ -29,7 +29,13 @@ export default class Index extends React.Component {
 		const newCategoryObj = { ...categoryObj, count: n};
 
 		this.setState({[categoryName]: newCategoryObj});
-	}
+	};
+
+	updateSaveData(user, key, value) {
+		let obj = JSON.parse();
+		obj[key] = value;
+
+	};
 
 	render() {
 		return (
@@ -60,6 +66,6 @@ export default class Index extends React.Component {
 					}
 				`}</style>
 			</>
-		)
+		);
 	};
 }
