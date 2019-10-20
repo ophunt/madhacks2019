@@ -13,8 +13,31 @@ export default (req, res) => {
 		res.end();
 	}
 
+	let path;
+	if (process.env.NODE_ENV === "production") {
+		path = "saveData/";
+	} else {
+		path = "public/saveData/";
+	}
+
+	fs.readdir(".", function(err, items) {
+		console.log(items);
+
+		for (var i=0; i<items.length; i++) {
+			console.log(items[i]);
+			if (fs.lstatSync(items[i]).isDirectory()) {
+				fs.readdir(items[i], function(err, items) {
+					for (var j=0; j<items.length; j++) {
+						console.log(items[i] + "/" + items[i][j]);
+					}
+				});
+			}
+		}
+	});
+
 	if (req.method === "POST") {
-		let path = "saveData/" + req.body.user + ".json";
+
+		path = path + req.body.user + ".json";
 		fs.readFile(path, (err, data) => {
 			if (err) {
 				console.log(err.stack);
@@ -35,7 +58,7 @@ export default (req, res) => {
 		});
 
 	} else if (req.method === "GET") {
-		let path = "saveData/" + req.query.user + ".json";
+		path = path + req.query.user + ".json";
 		fs.readFile(path, (err, data) => {
 			if (err) {
 				console.log(err.stack);
@@ -45,6 +68,5 @@ export default (req, res) => {
 				returnData(res, JSON.parse(data));
 			};
 		});
-		// returnData(res, {test: "text"});
 	}
 }

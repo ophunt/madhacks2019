@@ -18,3 +18,6 @@ node_modules/
 
 # Build files (they will be built on upload)
 .next/
+
+#DS Store
+*/.DS_Store

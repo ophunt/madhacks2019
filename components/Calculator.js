@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch';
 import Counter from "../components/Counter";
 
 export default class Index extends React.Component {
