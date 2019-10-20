@@ -7,7 +7,7 @@ const linkStyle = {
 export default class Header extends React.Component {
 	render = () => (
 		<div className="header">
-			<b>Water Watcher</b>
+			<b>Unbottlr</b>
 
 			<Link href="/">
 				<a style={linkStyle}>Home</a>

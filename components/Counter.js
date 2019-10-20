@@ -33,9 +33,8 @@ export default class Counter extends React.Component {
 				<input type="text" value={this.props.obj.count} onChange={this.handleChange}/>
 				<p className="units">{this.props.obj.units}</p>
 				<button className="add" onClick={this.add}>+</button>
-				<p className="total">x<b>{this.props.obj.multiplier}</b> L/{this.props.obj.unit} = </p>
-				<p className="total"><b>{totalCount}</b> litres used</p>
-
+				<p className="total">x<b>{this.props.obj.multiplier}</b> {this.props.obj.mainUnitShort}/{this.props.obj.unit} = </p>
+				<p className="total"><b>{totalCount}</b> {this.props.obj.mainUnit} used</p>
 
 				<style jsx>{`
 					.counter {
