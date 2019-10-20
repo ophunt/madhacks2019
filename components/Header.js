@@ -8,7 +8,7 @@ export default class Header extends React.Component {
 			<Link href="/">
 				<a className="logo"><img src="pic/inbottlr.png" width="150" height="50"/></a>
 			</Link>
-			<Link href="/track">
+			<Link href="/tracker">
 				<a className="tracker">TRACKER</a>
 			</Link>
 			<Link href="/ranking">
