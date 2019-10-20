@@ -6,7 +6,7 @@ export default class Login extends React.Component {
                 <div className="two_container">
                     <div className="container">
                         <h1>Log in</h1>
-                        <p>Don't have an account? <a href="hackathon/signup.html">Register Here</a></p>
+                        <p>Don't have an account? <a href="signup.html">Register Here</a></p>
                         <br /><br />
                         <label for="email"><b>Email</b></label>
                         <input type="text" placeholder="Enter Email" name="email" required />

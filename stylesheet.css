@@ -87,8 +87,15 @@ table{
 	width: 100%;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
+.table1{
+	width: 40%;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    margin-top: 20px;
+    
+}
 th{
 	height: 50px;
+    
 }
 td{
 	width: 50%;
@@ -176,9 +183,11 @@ blockquote{
     position: absolute;
 }
 .column-center {
-    width: 34%;
+    margin-top: 10px;
     margin-left: 33%;
-    position: absolute;
+    height: 2000px;
+   
+    border: 2px solid black;
 }
 .column-right {
     width: 33%;
@@ -198,8 +207,5 @@ tr{
     height: 300px;
     border-spacing: 5em;
 }
-/* Clear floats after the columns */
 
-table{
-    table
-}
+/* Clear floats after the columns */
