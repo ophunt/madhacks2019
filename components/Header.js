@@ -32,7 +32,7 @@ export default class Header extends React.Component {
 					align-items: center;
 					margin: 0;
 				}
-				.track, .ranking, .work, .contact, .login{
+				.tracker, .ranking, .work, .contact, .login{
 					margin: 0 0.5 em;
 					padding: 14px;
 				}
