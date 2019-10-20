@@ -50,8 +50,6 @@ export default class Index extends React.Component {
 	};
 
 	render() {
-		console.log(this.props.test);
-
 		return (
 			<>
 				{

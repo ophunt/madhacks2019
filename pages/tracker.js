@@ -7,8 +7,6 @@ export default class Index extends React.Component {
 	constructor(props) {
 		super(props);
 
-		console.log(props);
-
 		this.state = {};
 
 		this.state.waterCategories = [
@@ -31,8 +29,6 @@ export default class Index extends React.Component {
 	static async getInitialProps() {
 		const res = await fetch('http://localhost:3000/api/owen');
 		const test = await res.json();
-		console.log("IProps")
-		console.log(test)
 	 	return { data: test };
 	}
 
@@ -48,8 +44,8 @@ export default class Index extends React.Component {
 					<p>Track your water use:</p>
 					<WaterCalculator categories={this.state.waterCategories} data={this.props.data} />
 
-					{/* <p>Track your plastic use:</p>
-					<PlasticCalculator categories={this.state.plasticCategories} /> */}
+					<p>Track your plastic use:</p>
+					<PlasticCalculator categories={this.state.plasticCategories} data={this.props.data} />
 				</Layout>
 			</>
 		)

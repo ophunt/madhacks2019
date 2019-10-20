@@ -3,10 +3,8 @@ import Link from 'next/link';
 export default class Header extends React.Component {
 	render = () => (
 		<div className="nav">
-			<b>Unbottlr</b>
-
 			<Link href="/">
-				<a className="logo"><img src="pic/inbottlr.png" width="150" height="50"/></a>
+				<a className="logo"><img src="pics/inbottlr.png" width="150" height="50"/></a>
 			</Link>
 			<Link href="/tracker">
 				<a className="tracker">TRACKER</a>
@@ -21,7 +19,7 @@ export default class Header extends React.Component {
 				<a className="contact">ABOUT</a>
 			</Link>
 			<Link href="/login">
-				<a className="login"><img src="webapp/login.jpg" /></a>
+				<a className="login"><img src="pics/user.png" /></a>
 			</Link>
 			<style jsx>{`
 				.nav {
