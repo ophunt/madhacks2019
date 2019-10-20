@@ -2,13 +2,34 @@ import Head from "next/head";
 import Layout from "../components/HeaderedLayout";
 import WaterCalculator from "../components/WaterCalculator";
 import PlasticCalculator from "../components/PlasticCalculator";
-import DataManager from "../components/DataManager";
 
 export default class Index extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {};
+
+		this.state.waterCategories = [
+			// ["name", litres/unit, plural unit, singular unit]
+			["Toilet Flushes", 6, "flushes", "flush"],
+			["Minutes Showered", 8, "minutes", "minute"],
+			["Baths Taken", 40, "baths", "bath"],
+			["Seconds of Sink Use", 0.1, "seconds", "second"],
+			["Loads of Laundry", 80, "loads", "load"],
+			["Dishwasher Runs", 20, "runs", "run"],
+		];
+
+		this.state.plasticCategories = [
+			// ["name", litres/unit, plural unit, singular unit]
+			["Water Bottles", 15, "bottles", "bottle"],
+			["Plastic Wrap", 1.5, "sq. feet", "sq. foot"],
+		];
+	}
+
+	static async getInitialProps() {
+		const res = await fetch('http://localhost:3000/api/owen');
+		const test = await res.json();
+	 	return { data: test };
 	}
 
 	render() {
@@ -21,12 +42,10 @@ export default class Index extends React.Component {
 
 				<Layout>
 					<p>Track your water use:</p>
-					<WaterCalculator />
+					<WaterCalculator categories={this.state.waterCategories} data={this.props.data} />
 
 					<p>Track your plastic use:</p>
-					<PlasticCalculator />
-
-					<DataManager data={this.state}/>
+					<PlasticCalculator categories={this.state.plasticCategories} data={this.props.data} />
 				</Layout>
 			</>
 		)

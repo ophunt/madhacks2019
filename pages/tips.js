@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from "../components/HeaderedLayout";
 
 export default class Index extends React.Component {
@@ -61,3 +62,12 @@ export default class Index extends React.Component {
         </Layout> 
     )
 };
+=======
+export default class Tips extends React.Component {
+	render() {
+		return (
+			<div>Empty</div>
+		)
+	}
+}
+>>>>>>> 8735e31b4ea786c1f3bc3f3b7e3683407a81fd30

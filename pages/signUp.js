@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default class Login extends React.Component {
     render = () => (
         <div className="body">
@@ -87,3 +88,12 @@ export default class Login extends React.Component {
         </div>
     );
 }
+=======
+export default class SignUp extends React.Component {
+	render() {
+		return (
+			<div>Empty</div>
+		)
+	}
+}
+>>>>>>> 8735e31b4ea786c1f3bc3f3b7e3683407a81fd30

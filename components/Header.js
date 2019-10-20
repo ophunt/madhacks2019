@@ -3,13 +3,15 @@ import Link from 'next/link';
 export default class Header extends React.Component {
 	render = () => (
 		<div className="nav">
-			<b>Unbottlr</b>
-
 			<Link href="/">
-				<a className="logo"><img src="pic/inbottlr.png" width="150" height="50"/></a>
+				<a className="logo"><img src="pics/inbottlr.png" width="150" height="50"/></a>
 			</Link>
 			<Link href="/tracker">
+<<<<<<< HEAD
 				<a className="track">TRACKER</a>
+=======
+				<a className="tracker">TRACKER</a>
+>>>>>>> 8735e31b4ea786c1f3bc3f3b7e3683407a81fd30
 			</Link>
 			<Link href="/ranking">
 				<a className="ranking">RANKING</a>
@@ -21,7 +23,7 @@ export default class Header extends React.Component {
 				<a className="contact">ABOUT</a>
 			</Link>
 			<Link href="/login">
-				<a className="login"><img src="webapp/login.jpg" /></a>
+				<a className="login"><img src="pics/user.png" /></a>
 			</Link>
 			<style jsx>{`
 				.nav {
@@ -32,7 +34,7 @@ export default class Header extends React.Component {
 					align-items: center;
 					margin: 0;
 				}
-				.track, .ranking, .work, .contact, .login{
+				.tracker, .ranking, .work, .contact, .login{
 					margin: 0 0.5 em;
 					padding: 14px;
 				}
