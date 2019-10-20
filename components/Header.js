@@ -2,7 +2,9 @@ import Link from 'next/link';
 
 export default class Header extends React.Component {
 	render = () => (
-		<div className= "nav">
+		<div className="nav">
+			<b>Unbottlr</b>
+
 			<Link href="/">
 				<a className="logo"><img src="pic/inbottlr.png" width="150" height="50"/></a>
 			</Link>
