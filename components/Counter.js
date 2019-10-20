@@ -40,7 +40,7 @@ export default class Counter extends React.Component {
 
 				<style jsx>{`
 					.counter {
-						border: 1px solid blue;
+						border-bottom: 2px solid yellowgreen;
 						border-radius: 5px;
 						display: flex;
 						margin: 5px;
@@ -87,6 +87,11 @@ export default class Counter extends React.Component {
 					input {
 						width: 60px;
 						text-align: right;
+					}
+
+					p {
+						font-family: 'Montserrat', sans-serif;
+						font-size: 14px;
 					}
 				`}</style>
 			</div>

@@ -58,6 +58,18 @@ export default class Index extends React.Component {
 					<p>Track your plastic use:</p>
 					<PlasticCalculator categories={this.state.plasticCategories} data={this.props.data} />
 				</Layout>
+
+				<style jsx>{`
+					p {
+						border-bottom: 2px solid seagreen;
+						// border-radius: 4px;
+						font-family: 'Montserrat', sans-serif;
+						font-size: 16px;
+						margin-left: 10px;
+						margin-bottom: 7px;
+						display: inline-block;
+					}
+				`}</style>
 			</>
 		)
     };

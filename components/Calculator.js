@@ -70,10 +70,12 @@ export default class Index extends React.Component {
 
 				<style jsx>{`
 					.total {
+						font-family: 'Montserrat', sans-serif;
 						text-align: right;
 						margin: 10px;
-						border-top: 3px solid black;
+						border-top: 3px solid green;
 						padding-top: 5px;
+						font-size: 14px;
 					}
 				`}</style>
 			</>
