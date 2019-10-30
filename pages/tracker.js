@@ -35,7 +35,7 @@ export default class Index extends React.Component {
 	}
 
 	static async getInitialProps() {
-		const res = await fetch('http://localhost:3000/api/owen');
+		const res = await fetch('http://localhost:8080/api/owen');
 		const test = await res.json();
 	 	return { data: test };
 	}

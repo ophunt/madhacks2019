@@ -13,30 +13,10 @@ export default (req, res) => {
 		res.end();
 	}
 
-	let path;
-	if (process.env.NODE_ENV === "production") {
-		path = "saveData/";
-	} else {
-		path = "public/saveData/";
-	}
-
-	// fs.readdir(".", function(err, items) {
-	// 	console.log(items);
-
-	// 	for (var i=0; i<items.length; i++) {
-	// 		console.log(items[i]);
-	// 		if (fs.lstatSync(items[i]).isDirectory()) {
-	// 			fs.readdir(items[i], function(err, items) {
-	// 				for (var j=0; j<items.length; j++) {
-	// 					console.log(items[i] + "/" + items[i][j]);
-	// 				}
-	// 			});
-	// 		}
-	// 	}
-	// });
+	let path = "./public/saveData/";
 
 	if (req.method === "POST") {
-
+		console.log("got request");
 		path = path + req.body.user + ".json";
 		fs.readFile(path, (err, data) => {
 			if (err) {
